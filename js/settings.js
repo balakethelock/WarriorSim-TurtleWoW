@@ -193,7 +193,13 @@ SIM.SETTINGS = {
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });
-
+        
+        view.fight.on('change', 'select[name="targetlevel"]', function (e) {
+            e.stopPropagation();
+            SIM.UI.updateSession();
+            SIM.UI.updateSidebar();
+        });
+        
         view.fight.on('change', 'select[name="aqbooks"]', function (e) {
             e.stopPropagation();
             SIM.UI.updateSession();
@@ -217,13 +223,6 @@ SIM.SETTINGS = {
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });
-
-        view.fight.on('change', 'select[name="targetlevel"]', function (e) {
-            e.stopPropagation();
-            SIM.UI.updateSession();
-            SIM.UI.updateSidebar();
-        });
-
     },
 
     toggleArticle: function(label) {
