@@ -9,7 +9,7 @@ class Player {
                 level: parseInt($('select[name="targetlevel"]').val()),
                 basearmor: parseInt($('input[name="targetarmor"]').val()),
                 armor: parseInt($('input[name="targetarmor"]').val()),
-                defense: 5 *  parseInt($('select[name="targetlevel"]').val()),
+                defense: 5 * parseInt($('select[name="targetlevel"]').val()),
                 mitigation: 1 - 15 * (parseInt($('input[name="targetresistance"]').val()) / 6000),
                 binaryresist: parseInt(10000 - (8300 * (1 - (parseInt($('input[name="targetresistance"]').val()) * 0.15 / 60)))),
             },
