@@ -6,7 +6,7 @@ class Player {
             weaponrng: $('select[name="weaponrng"]').val() == "Yes",
             spelldamage: parseInt($('input[name="spelldamage"]').val()),
             target: {
-                level: parseInt($('input[name="targetlevel"]').val()),
+                level: parseInt($('select[name="targetlevel"]').val()),
                 basearmor: parseInt($('input[name="targetarmor"]').val()),
                 armor: parseInt($('input[name="targetarmor"]').val()),
                 defense: parseInt($('input[name="targetlevel"]').val()) * 5,
