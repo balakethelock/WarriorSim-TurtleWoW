@@ -268,10 +268,16 @@ class Simulation {
             if (player.mh.timer <= 0) {
                 this.idmg += player.attackmh(player.mh);
                 spellcheck = true;
+                if (player.oh && player.oh.timer <= 200) {
+                    player.oh.timer = 200;
+                }
             }
             if (player.oh && player.oh.timer <= 0) {
                 this.idmg += player.attackoh(player.oh);
                 spellcheck = true;
+                if (player.mh.timer <= 200) {
+                    player.mh.timer = 200;
+                }
             }
 
             // Spells
